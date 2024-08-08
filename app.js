@@ -1,5 +1,5 @@
 import express from 'express'
-import { delProducto, delProductos, getProductos, getProrducto, postProducto, putProducto } from './controllerProductos.js'
+import { delProducto, delProductos, getProrducto, postProducto, putProducto } from './controllerProductos'
 
 const app = express()
 
@@ -11,7 +11,7 @@ app.get('/',(req, res) => {
 })
 
 app.get('/productos',getProductos)
-app.get('/producto/:id',getProrducto)
+app.get('/producto/:id',getProrduct)
 app.post('/producto', postProducto)
 app.put('/producto/:id', putProducto)
 app.delete('/producto/:id',delProducto)
